@@ -17,10 +17,11 @@
             --primary-font: 'Lora', Georgia, serif;
             --secondary-font: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
             --text-dark: #222;
-            --accent-color: #A52A2A;
+            --accent-color: #A52A2A; /* Bordo crvena */
             --background-light: #FFFFFF;
             --border-light: #E0E0E0;
             --muted-text: #666;
+            --accent-border-color: #A52A2A; /* Koristimo istu boju za linije */
         }
 
         body {
@@ -39,10 +40,25 @@
             padding: 0 20px;
         }
 
+        /* NOVI STIL ZA FULL-WIDTH LINER */
+        .full-width-line {
+            border-bottom: 1px solid var(--border-light);
+            /* Bordo se dodaje u layout:page za header i footer */
+        }
+        
+        /* IZRACUNAVANJE VISINE ZA POST TITLE I DATUM */
+        .post-info-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px 20px 0;
+            background-color: var(--background-light); 
+        }
+
+        /* GLAVNE SEKCIJE - BEZ FIKSNE BORDURE OVDE */
         .header {
             text-align: center;
             padding: 50px 0 30px;
-            border-bottom: 1px solid var(--border-light);
+            /* UKLONJENA JE BORDURA, SADA JE U LAYOUT:PAGE */
         }
 
         .header h1 {
@@ -52,7 +68,7 @@
             letter-spacing: 1px;
             color: var(--accent-color);
         }
-
+        /* [OSTALI HEADER STILOVI OSTALI ISTI] */
         .header p {
             font-family: var(--secondary-font);
             font-size: 1.1em;
@@ -208,7 +224,7 @@
             font-family: var(--secondary-font);
             font-size: 0.9em;
             color: var(--muted-text);
-            border-top: 1px solid var(--border-light);
+            /* UKLONJENA JE BORDURA, SADA JE U LAYOUT:PAGE */
         }
 
         .footer a {
@@ -221,18 +237,61 @@
             color: var(--accent-color);
         }
 
-        @media (max-width: 600px) {
+        /* Post CSS za layout post.html */
+        .post-page-layout {
+            padding: 40px 0;
+        }
+
+        .post-header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 20px 30px; 
+        }
+
+        .post-content-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .post-content-container p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+        }
+
+        .post-columns {
+            columns: 2;
+            column-gap: 50px;
+            text-align: justify;
+        }
+
+        /* Stil za datume na vrhu posta */
+        .post-date-top {
+            font-family: var(--secondary-font);
+            font-size: 0.9em;
+            color: var(--muted-text);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+
+        @media (max-width: 768px) {
             .header h1 {
                 font-size: 2.5em;
             }
-
             .header-nav a {
                 margin: 0 10px;
                 font-size: 0.9em;
             }
-
             .category-grid {
                 gap: 10px;
+            }
+            /* Uklanja kolone na malim ekranima */
+            .post-columns {
+                columns: 1;
+                column-gap: 0;
             }
         }
     </style>
