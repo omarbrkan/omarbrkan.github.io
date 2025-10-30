@@ -17,30 +17,33 @@ layout: default
     </header>
 </div>
 
-<div style="height: 1px; background-color: var(--accent-border-color);"></div>
+<div class="page-wrapper">
 
-<main class="container">
-    {% if page.url != '/' %}
-    <h2 class="section-title">{{ page.title }}</h2>
-    {% endif %}
-    
-    {{ content }}
-    
-</main>
+    <div style="height: 1px; background-color: var(--accent-border-color);"></div>
 
-<div style="height: 1px; background-color: var(--accent-border-color);"></div>
+    <main class="container">
+        {% if page.url != '/' %}
+        <h2 class="section-title">{{ page.title }}</h2>
+        {% endif %}
+        
+        {{ content }}
+        
+    </main>
+
+    <div style="height: 1px; background-color: var(--accent-border-color);"></div>
 
 
-<section class="about-author-footer">
-    <div class="container">
-        <h3>O Autoru</h3>
-        <p>
-            Omar Brkan je pisac, esejista i kritičar. Njegov rad obuhvata analizu književnosti, kulture i društva, s
-            posebnim fokusom na teme identiteta, jezika i sjećanja u savremenom kontekstu.
-        </p>
-    </div>
-</section>
+    <section class="about-author-footer">
+        <div class="container">
+            <h3>O Autoru</h3>
+            <p>
+                Omar Brkan je pisac, esejista i kritičar. Njegov rad obuhvata analizu književnosti, kulture i društva, s
+                posebnim fokusom na teme identiteta, jezika i sjećanja u savremenom kontekstu.
+            </p>
+        </div>
+    </section>
 
+</div>
 <div class="full-width-line" style="border-top: 1px solid var(--accent-border-color);">
     <footer class="footer">
         <div class="container">
