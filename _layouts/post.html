@@ -1,0 +1,23 @@
+---
+layout: default
+---
+
+<div class="post-page-layout">
+
+    <div class="post-header-container">
+        <h1 style="font-size: 2.8em; margin-bottom: 10px;">{{ page.title }}</h1>
+        <p class="post-meta" style="font-family: var(--secondary-font); color: var(--muted-text); font-size: 1.1em;">
+            By Omar Brkan | 
+            <span style="color: var(--accent-color);">{{ page.date | date: "%d. %B %Y." }}</span> | 
+            Kategorija: <a href="{{ site.baseurl }}/kategorija-{{ page.category | slugify }}" style="color: var(--accent-color); text-decoration: none;">{{ page.category }}</a>
+        </p>
+    </div>
+    
+    <div style="height: 1px; background-color: var(--accent-color); margin: 30px 0;"></div>
+
+    <div class="post-content-container">
+        <div class="post-columns">
+            {{ content }}
+        </div>
+    </div>
+</div>
