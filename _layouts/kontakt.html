@@ -1,0 +1,66 @@
+---
+layout: page
+title: Kontakt
+permalink: /kontakt
+---
+
+<p>Hvala Vam na interesovanju. Za sva pitanja, predloge za saradnju, recenzije ili upite medija, možete me kontaktirati direktno putem email adrese ili koristeći kontakt formu ispod.</p>
+
+<div style="margin-top: 30px; font-family: var(--secondary-font); text-align: center;">
+    <p style="font-size: 1.2em; color: var(--accent-color); font-weight: 600;">Direktni kontakt:</p>
+    <p style="font-size: 1.1em;"><a href="mailto:omar.brkan@example.com" style="color: var(--text-dark); text-decoration: none;">omar.brkan@example.com</a></p>
+</div>
+
+<h3 style="text-align: center; margin-top: 40px; border-bottom: 1px solid var(--border-light); padding-bottom: 15px;">Pošaljite Poruku</h3>
+
+<form action="https://formspree.io/f/YOUR_HASH" method="POST" style="max-width: 600px; margin: 0 auto; padding-bottom: 60px;">
+    
+    <style>
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-family: var(--secondary-font); font-weight: 600; }
+        .form-group input[type="text"], 
+        .form-group input[type="email"], 
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--border-light);
+            border-radius: 4px;
+            box-sizing: border-box; /* Uključuje padding u ukupnu širinu */
+            font-family: var(--primary-font);
+        }
+        .form-group textarea { resize: vertical; height: 150px; }
+        .submit-button {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-family: var(--secondary-font);
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        .submit-button:hover {
+            background-color: #8B1A1A; 
+        }
+    </style>
+    
+    <div class="form-group">
+        <label for="name">Vaše Ime:</label>
+        <input type="text" id="name" name="name" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="email">Vaš Email:</label>
+        <input type="email" id="email" name="_replyto" required>
+    </div>
+    
+    <div class="form-group">
+        <label for="message">Poruka:</label>
+        <textarea id="message" name="message" required></textarea>
+    </div>
+    
+    <button type="submit" class="submit-button">Pošalji Poruku</button>
+</form>
