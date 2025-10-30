@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Svi Tekstovi i Arhiva
+title: Najnovije
 permalink: /tekstovi
 ---
 
@@ -8,13 +8,19 @@ permalink: /tekstovi
 
 <ul class="text-list">
     {% for post in site.posts %}
-    <li>
+    <li style="border-bottom: 1px solid var(--accent-border-color);">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <p class="text-meta">
             Objavljeno: {{ post.date | date: "%d. %B %Y." }} | Kategorija: {{ post.category | default: "Tekst" }}
         </p>
     </li>
     {% endfor %}
+    <li style="border-bottom: none;">
+        <a href="#">(Primjer) Dodatni tekst da se popuni prostor</a>
+        <p class="text-meta">
+            Objavljeno: 01. Oktobar 2025. | Kategorija: Primer
+        </p>
+    </li>
 </ul>
 
 {% if site.posts.size == 0 %}
