@@ -1,0 +1,22 @@
+---
+layout: page
+title: Svi Tekstovi i Arhiva
+permalink: /tekstovi
+---
+
+<p>Ovo je arhiva svih objavljenih eseja, kritika, proze i poezije, raspoređenih hronološki.</p>
+
+<ul class="text-list">
+    {% for post in site.posts %}
+    <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <p class="text-meta">
+            Objavljeno: {{ post.date | date: "%d. %B %Y." }} | Kategorija: {{ post.category | default: "Tekst" }}
+        </p>
+    </li>
+    {% endfor %}
+</ul>
+
+{% if site.posts.size == 0 %}
+    <p>Trenutno nema objavljenih tekstova. Vratite se uskoro!</p>
+{% endif %}
