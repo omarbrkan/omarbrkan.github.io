@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="page-wrapper">
+
+    <div style="height: 1px; background-color: var(--accent-border-color);"></div>
+
+    <main class="container">
+        
+        <h2 class="section-title">Kategorija: {{ page.title }}</h2>
+
+        <p>Svi tekstovi objavljeni u kategoriji <strong>{{ page.title }}</strong>.</p>
+
+        <ul class="text-list" style="margin-top: 50px;">
+            {% for post in site.categories[page.category_name] %}
+            <li style="border-bottom: 1px solid var(--accent-border-color);">
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <p class="text-meta">
+                    Objavljeno: {{ post.date | date: "%d. %B %Y." }}
+                </p>
+            </li>
+            {% endfor %}
+        </ul>
+
+        {% if site.categories[page.category_name].size == 0 %}
+            <p style="text-align: center; margin-top: 50px; color: var(--muted-text);">Trenutno nema objavljenih tekstova u ovoj kategoriji.</p>
+        {% endif %}
+        
+    </main>
+
+    <div style="height: 1px; background-color: var(--accent-border-color);"></div>
+
+
+    <section class="about-author-footer">
+        <div class="container">
+            <h3>O Autoru</h3>
+            <p>
+                Omar Brkan je pisac, esejista i kritičar. Njegov rad obuhvata analizu književnosti, kulture i društva, s
+                posebnim fokusom na teme identiteta, jezika i sjećanja u savremenom kontekstu.
+            </p>
+        </div>
+    </section>
+
+</div>
+
+<div class="full-width-line" style="border-top: 1px solid var(--accent-border-color);">
+    <footer class="footer">
+        <div class="container">
+            &copy; {{ site.time | date: "%Y" }} Omar Brkan. Sva prava zadržana. |
+            <a href="{{ site.baseurl }}/pravila">Pravila korišćenja</a> |
+            <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
+        </div>
+    </footer>
+</div>
