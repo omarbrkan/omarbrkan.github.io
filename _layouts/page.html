@@ -17,6 +17,8 @@ layout: default
     </header>
 </div>
 
+<div style="height: 1px; background-color: var(--accent-border-color);"></div>
+
 <main class="container">
     {% if page.url != '/' %}
     <h2 class="section-title">{{ page.title }}</h2>
@@ -26,13 +28,15 @@ layout: default
     
 </main>
 
+<div style="height: 1px; background-color: var(--accent-border-color);"></div>
+
+
 <section class="about-author-footer">
     <div class="container">
         <h3>O Autoru</h3>
         <p>
             Omar Brkan je pisac, esejista i kritičar. Njegov rad obuhvata analizu književnosti, kulture i društva, s
-            posebnim fokusom na teme identiteta, jezika i sjećanja u savremenom kontekstu. Više o autoru možete
-            pronaći na stranici "O Autoru".
+            posebnim fokusom na teme identiteta, jezika i sjećanja u savremenom kontekstu.
         </p>
     </div>
 </section>
@@ -41,7 +45,7 @@ layout: default
     <footer class="footer">
         <div class="container">
             &copy; {{ site.time | date: "%Y" }} Omar Brkan. Sva prava zadržana. |
-            <a href="{{ site.baseurl }}/pravila">Pravila korištenja</a> |
+            <a href="{{ site.baseurl }}/pravila">Pravila korišćenja</a> |
             <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
         </div>
     </footer>
