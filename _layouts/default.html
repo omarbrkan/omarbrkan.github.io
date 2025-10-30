@@ -10,18 +10,18 @@
         href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap"
         rel="stylesheet">
     
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23A52A2A' font-family='Georgia, serif' text-anchor='middle' x='50'>OB</text></svg>">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='63' fill='%23A52A2A' font-family='Georgia, serif' text-anchor='middle' x='50'>OB</text></svg>">
 
     <style>
         :root {
             --primary-font: 'Lora', Georgia, serif;
             --secondary-font: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
             --text-dark: #222;
-            --accent-color: #A52A2A; /* Bordo crvena */
+            --accent-color: #A52A2A;
             --background-light: #FFFFFF;
             --border-light: #E0E0E0;
             --muted-text: #666;
-            --accent-border-color: #A52A2A; /* Koristimo istu boju za linije */
+            --accent-border-color: #A52A2A;
         }
 
         body {
@@ -40,25 +40,26 @@
             padding: 0 20px;
         }
 
-        /* NOVI STIL ZA FULL-WIDTH LINER */
         .full-width-line {
             border-bottom: 1px solid var(--border-light);
-            /* Bordo se dodaje u layout:page za header i footer */
         }
         
-        /* IZRACUNAVANJE VISINE ZA POST TITLE I DATUM */
         .post-info-container {
             max-width: 1000px;
             margin: 0 auto;
             padding: 20px 20px 0;
             background-color: var(--background-light); 
         }
+        
+        /* NOVI STIL ZA GLAVNI SADRŽAJ SA VERTIKALNIM LINIJAMA */
+        .page-wrapper {
+            border-left: 1px solid var(--accent-border-color);
+            border-right: 1px solid var(--accent-border-color);
+        }
 
-        /* GLAVNE SEKCIJE - BEZ FIKSNE BORDURE OVDE */
         .header {
             text-align: center;
             padding: 50px 0 30px;
-            /* UKLONJENA JE BORDURA, SADA JE U LAYOUT:PAGE */
         }
 
         .header h1 {
@@ -68,7 +69,7 @@
             letter-spacing: 1px;
             color: var(--accent-color);
         }
-        /* [OSTALI HEADER STILOVI OSTALI ISTI] */
+        
         .header p {
             font-family: var(--secondary-font);
             font-size: 1.1em;
@@ -123,14 +124,9 @@
             padding: 0;
             margin: 0;
         }
-
+        
         .text-list li {
-            border-bottom: 1px dashed var(--border-light);
             padding: 18px 0;
-        }
-
-        .text-list li:last-child {
-            border-bottom: none;
         }
 
         .text-list a {
@@ -198,7 +194,7 @@
             background-color: #f7f7f7;
             text-align: center;
             border-radius: 5px;
-            border-left: 5px solid var(--accent-color);
+            /* UKLONJENA JE STARA BORDURA: border-left: 5px solid var(--accent-color); */
         }
 
         .about-author-footer h3 {
@@ -224,7 +220,6 @@
             font-family: var(--secondary-font);
             font-size: 0.9em;
             color: var(--muted-text);
-            /* UKLONJENA JE BORDURA, SADA JE U LAYOUT:PAGE */
         }
 
         .footer a {
@@ -237,7 +232,6 @@
             color: var(--accent-color);
         }
 
-        /* Post CSS za layout post.html */
         .post-page-layout {
             padding: 40px 0;
         }
@@ -267,7 +261,6 @@
             text-align: justify;
         }
 
-        /* Stil za datume na vrhu posta */
         .post-date-top {
             font-family: var(--secondary-font);
             font-size: 0.9em;
@@ -288,10 +281,14 @@
             .category-grid {
                 gap: 10px;
             }
-            /* Uklanja kolone na malim ekranima */
             .post-columns {
                 columns: 1;
                 column-gap: 0;
+            }
+            /* Uklanjamo linije na malim ekranima */
+            .page-wrapper {
+                border-left: none;
+                border-right: none;
             }
         }
     </style>
