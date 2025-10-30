@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<header class="header">
+    <div class="container">
+        <h1>OMAR BRKAN</h1>
+        <p>Eseji, proza, kritika i poezija</p>
+
+        <nav class="header-nav">
+            <a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Početna</a>
+            <a href="{{ site.baseurl }}/tekstovi">Svi Tekstovi</a>
+            <a href="{{ site.baseurl }}/kontakt" {% if page.url == '/kontakt.html' %}class="active"{% endif %}>Kontakt</a>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <h2 class="section-title">{{ page.title }}</h2>
+    
+    {{ content }}
+    
+</main>
+
+<section class="about-author-footer">
+    <div class="container">
+        <h3>O Autoru</h3>
+        <p>
+            Omar Brkan je pisac, esejista i kritičar. Njegov rad obuhvata analizu književnosti, kulture i društva, s
+            posebnim fokusom na teme identiteta, jezika i sjećanja u savremenom kontekstu. Više o autoru možete
+            pronaći na stranici "O Autoru".
+        </p>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="container">
+        &copy; {{ site.time | date: "%Y" }} Omar Brkan. Sva prava zadržana. |
+        <a href="{{ site.baseurl }}/pravila">Pravila korišćenja</a> |
+        <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
+    </div>
+</footer>
