@@ -2,21 +2,25 @@
 layout: default
 ---
 
-<header class="header">
-    <div class="container">
-        <h1>OMAR BRKAN</h1>
-        <p>Eseji, proza, kritika i poezija</p>
+<div class="full-width-line" style="border-bottom: 1px solid var(--accent-border-color);">
+    <header class="header">
+        <div class="container">
+            <h1>OMAR BRKAN</h1>
+            <p>Eseji, proza, kritika i poezija</p>
 
-        <nav class="header-nav">
-            <a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Početna</a>
-            <a href="{{ site.baseurl }}/tekstovi">Svi Tekstovi</a>
-            <a href="{{ site.baseurl }}/kontakt" {% if page.url == '/kontakt.html' %}class="active"{% endif %}>Kontakt</a>
-        </nav>
-    </div>
-</header>
+            <nav class="header-nav">
+                <a href="{{ site.baseurl }}/" {% if page.url == '/' %}class="active"{% endif %}>Početna</a>
+                <a href="{{ site.baseurl }}/tekstovi" {% if page.url == '/tekstovi.html' or page.url == '/tekstovi/' %}class="active"{% endif %}>Svi Tekstovi</a>
+                <a href="{{ site.baseurl }}/kontakt" {% if page.url == '/kontakt.html' or page.url == '/kontakt/' %}class="active"{% endif %}>Kontakt</a>
+            </nav>
+        </div>
+    </header>
+</div>
 
 <main class="container">
+    {% if page.url != '/' %}
     <h2 class="section-title">{{ page.title }}</h2>
+    {% endif %}
     
     {{ content }}
     
@@ -33,10 +37,12 @@ layout: default
     </div>
 </section>
 
-<footer class="footer">
-    <div class="container">
-        &copy; {{ site.time | date: "%Y" }} Omar Brkan. Sva prava zadržana. |
-        <a href="{{ site.baseurl }}/pravila">Pravila korišćenja</a> |
-        <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
-    </div>
-</footer>
+<div class="full-width-line" style="border-top: 1px solid var(--accent-border-color);">
+    <footer class="footer">
+        <div class="container">
+            &copy; {{ site.time | date: "%Y" }} Omar Brkan. Sva prava zadržana. |
+            <a href="{{ site.baseurl }}/pravila">Pravila korištenja</a> |
+            <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
+        </div>
+    </footer>
+</div>
