@@ -3,6 +3,8 @@ layout: default
 title: Početna
 ---
 
+{% include header.html %}
+
 <h2 class="section-title">Kategorije</h2>
 
 <div class="category-grid">
@@ -33,6 +35,10 @@ title: Početna
     {% endfor %}
 </ul>
 
-<div style="text-align: right; margin-top: 20px; padding-bottom: 50px;">
-    <a href="{{ site.baseurl }}/tekstovi" style="color: var(--accent-color); text-decoration: none;">Prikaži sve tekstove →</a>
+{% if site.posts.size > 5 %}
+<div style="text-align: center; margin-top: 30px; margin-bottom: 50px;">
+    <a href="{{ site.baseurl }}/tekstovi" class="button">Prikaži sve tekstove →</a>
 </div>
+{% endif %}
+
+{% include footer.html %}
