@@ -23,13 +23,28 @@ layout: default
 
     <main class="container">
         
-        <h2 class="section-title">Kategorija: {{ page.title }}</h2>
+        <h2 class="section-title">Kategorije</h2>
 
-        <p>Svi tekstovi objavljeni u kategoriji <strong>{{ page.title }}</strong>.</p>
+        <div class="category-grid">
+            <div class="category-card">
+                <a href="{{ site.baseurl }}/kategorija-eseji">Eseji / Studije</a>
+            </div>
+            <div class="category-card">
+                <a href="{{ site.baseurl }}/kategorija-kritika">Kritika / Osvrti</a>
+            </div>
+            <div class="category-card">
+                <a href="{{ site.baseurl }}/kategorija-proza">Proza</a>
+            </div>
+            <div class="category-card">
+                <a href="{{ site.baseurl }}/kategorija-poezija">Poezija</a>
+            </div>
+        </div>
+
+        <h2 class="section-title">Tekstovi u kategoriji: {{ page.title }}</h2>
 
         <ul class="text-list" style="margin-top: 50px;">
             {% for post in site.categories[page.category_name] %}
-            <li style="border-bottom: 1px solid var(--accent-border-color);">
+            <li style="border-bottom: 1px solid var(--light-border-color);">
                 <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
                 <p class="text-meta">
                     Objavljeno: {{ post.date | date: "%d. %B %Y." }}
