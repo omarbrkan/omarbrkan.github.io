@@ -13,6 +13,7 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.7em' font-size='63' fill='%23A52A2A' font-family='Georgia, serif' text-anchor='middle' x='50'>OB</text></svg>">
 
     <style>
+        
         :root {
             --primary-font: 'Lora', Georgia, serif;
             --secondary-font: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
@@ -22,7 +23,7 @@
             --border-light: #E0E0E0;
             --muted-text: #666;
             --accent-border-color: #A52A2A;
-            --light-border-color: #ccc; 
+            --light-border-color: #ccc;
         }
 
         body {
@@ -36,18 +37,18 @@
         }
 
         .container {
+            /* Osnovni kontejner za centriranje sadržaja */
             max-width: 1000px;
             margin: 0 auto;
             padding: 0 20px;
         }
 
         .full-width-line {
-            border-bottom: 1px solid var(--border-light);
+            
         }
         
         .page-wrapper {
-            border-left: 1px solid var(--accent-border-color);
-            border-right: 1px solid var(--accent-border-color);
+            
         }
 
         .header {
@@ -93,28 +94,24 @@
             border-bottom: 2px solid var(--accent-color);
         }
 
+       
         .section-title {
-            font-size: 1.7em;
-            font-family: var(--font-serif);
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
+            font-size: 1.6em; /* Smanjeno sa 1.7em */
+            font-family: var(--primary-font); 
             font-weight: 400;
             color: var(--text-dark);
-            position: relative;
-            display: inline-block;
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 5px;
+            
+            
+            display: block; 
+            width: fit-content; 
+            margin: 40px auto 20px auto; 
+            
+            
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
         }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 2px;
-            background-color: var(--accent-color);
-            margin: 10px auto 0;
-        }
+       
         
         .post-title {
             font-size: 2.5em;
@@ -203,11 +200,16 @@
         }
 
         .about-author-footer {
-            margin: 60px 0 20px;
-            padding: 30px;
+         
+            margin: 60px 0 0; 
+            padding: 30px 0; 
             background-color: #f7f7f7;
             text-align: center;
-            border-radius: 5px;
+        }
+
+        .about-author-footer .container {
+          
+            max-width: 700px;
         }
 
         .about-author-footer h3 {
@@ -221,7 +223,6 @@
         .about-author-footer p {
             font-family: var(--primary-font);
             font-size: 1em;
-            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
             color: var(--muted-text);
@@ -269,10 +270,6 @@
             .category-grid {
                 gap: 10px;
             }
-            .page-wrapper {
-                border-left: none;
-                border-right: none;
-            }
             .post-content-container {
                 max-width: 100%;
                 padding: 0 20px;
@@ -283,7 +280,49 @@
 
 <body>
 
-    {{ content }}
+    <div class="full-width-line" style="border-bottom: 1px solid var(--light-border-color);">
+        <header class="header">
+            <div class="container">
+                <h1>OMAR BRKAN</h1>
+                <p>Eseji, proza, kritika i poezija</p>
+
+                <nav class="header-nav">
+                    <a href="{{ site.baseurl }}/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>Početna</a>
+                    <a href="{{ site.baseurl }}/tekstovi" {% if page.url == '/tekstovi.html' or page.url == '/tekstovi/' %}class="active"{% endif %}>Svi Tekstovi</a>
+                    <a href="{{ site.baseurl }}/kontakt" {% if page.url == '/kontakt.html' or page.url == '/kontakt/' %}class="active"{% endif %}>Kontakt</a>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+    <div class="page-wrapper">
+        <main class="container">
+            {{ content }} 
+        </main>
+    </div>
+
+    <div class="full-width-line" style="border-top: 1px solid var(--light-border-color); margin-top: 40px;">
+        <section class="about-author-footer">
+            <div class="container">
+                <h3>O Autoru</h3>
+                <p>
+                    Omar Brkan je pisac, esejista i kritičar. Njegov rad obuhvata analizu književnosti, kulture i društva, s
+                    posebnim fokusom na teme identiteta, jezika i sjećanja u savremenom kontekstu.
+                </p>
+            </div>
+        </section>
+    </div>
+
+
+    <div class="full-width-line" style="border-top: 1px solid var(--light-border-color);">
+        <footer class="footer">
+            <div class="container">
+                &copy; {{ site.time | date: "%Y" }} Omar Brkan. Sva prava zadržana. |
+                <a href="{{ site.baseurl }}/pravila">Pravila korištenja</a> |
+                <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
+            </div>
+        </footer>
+    </div>
 
 </body>
 
