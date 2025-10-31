@@ -1,18 +1,19 @@
-title: Omar Brkan 
+title: Omar Brkan
 description: Eseji, proza, kritika i poezija
 author: Omar Brkan
-email: brkano@gmail.com  
+email: brkano@email.com
 
+markdown: kramdown
+encoding: utf-8
+kramdown:
+  input: GFM
+  hard_wrap: false
 
-theme: jekyll-theme-minimal 
-baseurl: "" 
-
-
+baseurl: ""
 permalink: /:categories/:title/
 future: false
 show_excerpts: true
 
-
 jekyll-category-pages:
   layout: default
-  permalink: /:category/
+  permalink: /category/
