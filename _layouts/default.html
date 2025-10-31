@@ -17,12 +17,12 @@
             --primary-font: 'Lora', Georgia, serif;
             --secondary-font: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
             --text-dark: #222;
-            --accent-color: #A52A2A;
+            --accent-color: #8b0000;
             --background-light: #FFFFFF;
             --border-light: #E0E0E0;
             --muted-text: #666;
             --accent-border-color: #A52A2A;
-            --light-border-color: #E0E0E0; 
+            --light-border-color: #ccc; 
         }
 
         body {
@@ -94,13 +94,17 @@
         }
 
         .section-title {
-            font-size: 2.2em;
+            font-size: 1.7em;
+            font-family: var(--font-serif);
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 30px;
+            margin-top: 40px;
+            margin-bottom: 20px;
             font-weight: 400;
             color: var(--text-dark);
             position: relative;
+            display: inline-block;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 5px;
         }
 
         .section-title::after {
