@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kratka Priča: Magla na Vrbasu
+title: Kratka Priča Magla na Vrbasu
 date: 2025-10-25 09:15:00 +0100
 category: Proza
 permalink: /proza/magla-na-vrbasu
