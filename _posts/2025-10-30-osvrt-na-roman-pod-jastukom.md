@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Osvrt: "Knjiga pod jastukom" - Intimna arheologija
+title: Osvrt "Knjiga pod jastukom" - Intimna arheologija
 date: 2025-10-30 14:30:00 +0100
 category: Kritika / Osvrti
 permalink: /kritika/knjiga-pod-jastukom-osvrt
