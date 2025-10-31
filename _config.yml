@@ -15,5 +15,5 @@ future: false
 show_excerpts: true
 
 jekyll-category-pages:
-  layout: default
-  permalink: /category/
+  layout: empty 
+  permalink: /kategorija-:title/ 
