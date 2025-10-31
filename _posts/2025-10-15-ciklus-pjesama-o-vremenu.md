@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ciklus: Pjesme o Vremenu koje Prolazi
+title: Ciklus Pjesme o Vremenu koje Prolazi
 date: 2025-10-15 08:45:00 +0100
 category: Poezija
 permalink: /poezija/ciklus-pjesama-o-vremenu
