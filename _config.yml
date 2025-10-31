@@ -17,3 +17,17 @@ show_excerpts: true
 jekyll-category-pages:
   layout: page 
   permalink: /kategorija-:title/ 
+  
+defaults:
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
