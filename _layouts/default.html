@@ -1,47 +1,283 @@
----
-layout: base
----
+<!DOCTYPE html>
+<html lang="bs">
 
-<div class="full-width-line" style="border-bottom: 1px solid var(--light-border-color);">
-    <header class="header">
-        <div class="container">
-            <h1>OMAR BRKAN</h1>
-            <p>Eseji, proza, kritika i poezija</p>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title | default: site.title }} - Omar Brkan</title>
 
-            <nav class="header-nav">
-                <a href="{{ site.baseurl }}/" {% if page.url == '/' or page.url == '/index.html' %}class="active"{% endif %}>Početna</a>
-                <a href="{{ site.baseurl }}/tekstovi" {% if page.url == '/tekstovi.html' or page.url == '/tekstovi/' %}class="active"{% endif %}>Svi Tekstovi</a>
-                <a href="{{ site.baseurl }}/kontakt" {% if page.url == '/kontakt.html' or page.url == '/kontakt/' %}class="active"{% endif %}>Kontakt</a>
-            </nav>
-        </div>
-    </header>
-</div>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap"
+        rel="stylesheet">
+    
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.7em' font-size='63' fill='%23A52A2A' font-family='Georgia, serif' text-anchor='middle' x='50'>OB</text></svg>">
 
-<div class="page-wrapper">
-    <main class="container">
-        {{ content }} 
-    </main>
-</div>
+    <style>
+        /* SVA VAŠA STILIZACIJA (CSS) IDE OVDE */
+        
+        :root {
+            --primary-font: 'Lora', Georgia, serif;
+            --secondary-font: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
+            --text-dark: #222;
+            --accent-color: #8b0000;
+            --background-light: #FFFFFF;
+            --border-light: #E0E0E0;
+            --muted-text: #666;
+            --accent-border-color: #A52A2A;
+            --light-border-color: #ccc;
+        }
 
-<div class="full-width-line" style="border-top: 1px solid var(--light-border-color); margin-top: 40px;">
-    <section class="about-author-footer">
-        <div class="container">
-            <h3>O Autoru</h3>
-            <p>
-                Omar Brkan je pisac, esejista i kritičar. Njegov rad obuhvata analizu književnosti, kulture i društva, s
-                posebnim fokusom na teme identiteta, jezika i sjećanja u savremenom kontekstu.
-            </p>
-        </div>
-    </section>
-</div>
+        body {
+            font-family: var(--primary-font);
+            color: var(--text-dark);
+            background-color: var(--background-light);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
 
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-<div class="full-width-line" style="border-top: 1px solid var(--light-border-color);">
-    <footer class="footer">
-        <div class="container">
-            &copy; {{ site.time | date: "%Y" }} Omar Brkan. Sva prava zadržana. |
-            <a href="{{ site.baseurl }}/pravila">Pravila korištenja</a> |
-            <a href="{{ site.baseurl }}/kontakt">Kontakt</a>
-        </div>
-    </footer>
-</div>
+        .full-width-line {
+            /* Koristi se za horizontalne linije */
+        }
+        
+        .page-wrapper {
+            /* Ovo je samo wrapper za centriranje sadržaja unutar kontejnera */
+        }
+
+        .header {
+            text-align: center;
+            padding: 50px 0 30px;
+        }
+
+        .header h1 {
+            font-size: 3.2em;
+            margin-bottom: 5px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: var(--accent-color);
+        }
+        
+        .header p {
+            font-family: var(--secondary-font);
+            font-size: 1.1em;
+            color: var(--muted-text);
+            margin-top: 0;
+            letter-spacing: 0.5px;
+        }
+
+        .header-nav {
+            margin-top: 25px;
+        }
+
+        .header-nav a {
+            font-family: var(--secondary-font);
+            text-decoration: none;
+            color: var(--text-dark);
+            margin: 0 15px;
+            font-size: 1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 5px 0;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        .header-nav a:hover,
+        .header-nav .active {
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .section-title {
+            font-size: 1.6em; 
+            font-family: var(--primary-font); 
+            font-weight: 400;
+            color: var(--text-dark);
+            display: block; 
+            width: fit-content; 
+            margin: 40px auto 20px auto; 
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 5px;
+        }
+        
+        .post-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        .post-meta-details {
+            font-family: var(--secondary-font);
+            font-size: 0.9em;
+            color: var(--muted-text);
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .text-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .text-list li {
+            padding: 18px 0;
+            border-bottom: 1px solid var(--light-border-color);
+        }
+
+        .text-list a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-size: 1.3em;
+            font-weight: 400;
+            display: block;
+            transition: color 0.3s ease;
+        }
+
+        .text-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .text-meta {
+            font-family: var(--secondary-font);
+            font-size: 0.9em;
+            color: var(--muted-text);
+            margin-top: 5px;
+        }
+
+        .category-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+            flex-wrap: wrap;
+        }
+
+        .category-card {
+            text-align: center;
+            padding: 10px 20px;
+            border: 1px solid var(--border-light);
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+            flex-grow: 0;
+            flex-shrink: 0;
+            min-width: 150px;
+        }
+
+        .category-card:hover {
+            background-color: #f9f9f9;
+            border-color: var(--accent-color);
+        }
+
+        .category-card a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-family: var(--secondary-font);
+            font-weight: 600;
+            display: block;
+            font-size: 1em;
+            text-transform: uppercase;
+        }
+
+        .category-card a:hover {
+            color: var(--accent-color);
+        }
+
+        .about-author-footer {
+            margin: 60px 0 0; 
+            padding: 30px 0; 
+            background-color: #f7f7f7;
+            text-align: center;
+        }
+
+        .about-author-footer .container {
+            max-width: 700px;
+        }
+
+        .about-author-footer h3 {
+            font-size: 1.5em;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-family: var(--secondary-font);
+        }
+
+        .about-author-footer p {
+            font-family: var(--primary-font);
+            font-size: 1em;
+            margin-left: auto;
+            margin-right: auto;
+            color: var(--muted-text);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px 0;
+            font-family: var(--secondary-font);
+            font-size: 0.9em;
+            color: var(--muted-text);
+        }
+
+        .footer a {
+            color: var(--muted-text);
+            text-decoration: none;
+            margin: 0 5px;
+        }
+
+        .footer a:hover {
+            color: var(--accent-color);
+        }
+
+        .post-content-container {
+            max-width: 700px; 
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        .post-content-container p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5em;
+            }
+            .header-nav a {
+                margin: 0 10px;
+                font-size: 0.9em;
+            }
+            .category-grid {
+                gap: 10px;
+            }
+            .post-content-container {
+                max-width: 100%;
+                padding: 0 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="page-wrapper">
+        <main class="container">
+            {{ content }} 
+        </main>
+    </div>
+
+</body>
+
+</html>
