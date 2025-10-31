@@ -6,7 +6,6 @@ title: Početna
 <h2 class="section-title">Kategorije</h2>
 
 <div class="category-grid">
-
     <div class="category-card">
         <a href="{{ site.baseurl }}/kategorija-eseji">Eseji / Studije</a>
     </div>
@@ -19,51 +18,21 @@ title: Početna
     <div class="category-card">
         <a href="{{ site.baseurl }}/kategorija-poezija">Poezija</a>
     </div>
-
 </div>
 
 <h2 class="section-title">Najnovije</h2>
 
 <ul class="text-list">
-    
     {% for post in site.posts limit: 5 %}
-    <li style="border-bottom: 1px solid var(--accent-border-color);">
+    <li style="border-bottom: 1px solid var(--light-border-color);">
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
         <p class="text-meta">
             Objavljeno: {{ post.date | date: "%d. %B %Y." }} | Kategorija: {{ post.category | default: "Tekst" }}
         </p>
     </li>
     {% endfor %}
-
-    {% if site.posts.size == 0 %}
-    
-    <li style="border-bottom: 1px solid var(--accent-border-color);">
-        <a href="#">(Primjer) Refleksija o Savremenom Jeziku i Globalizaciji</a>
-        <p class="text-meta">Objavljeno: 28. Oktobar 2025. | Kategorija: Eseji / Studije</p>
-    </li>
-    <li style="border-bottom: 1px solid var(--accent-border-color);">
-        <a href="#">(Primjer) Kritika Filma 'Vreme Zla': Pogled na Jugoslovenski Art</a>
-        <p class="text-meta">Objavljeno: 20. Oktobar 2025. | Kategorija: Kritika / Osvrti</p>
-    </li>
-    <li style="border-bottom: 1px solid var(--accent-border-color);">
-        <a href="#">(Primjer) Priča iz Mostara: Sjene Starog Mosta</a>
-        <p class="text-meta">Objavljeno: 15. Oktobar 2025. | Kategorija: Proza</p>
-    </li>
-    <li style="border-bottom: 1px solid var(--accent-border-color);">
-        <a href="#">(Primjer) Zbirka: Deset Mjesečevih Ciklusa</a>
-        <p class="text-meta">Objavljeno: 10. Oktobar 2025. | Kategorija: Poezija</p>
-    </li>
-    <li style="border-bottom: none;">
-        <a href="#">(Primjer) Esej o Identitetu u Post-Tranzicijskom Društvu</a>
-        <p class="text-meta">Objavljeno: 01. Oktobar 2025. | Kategorija: Eseji / Studije</p>
-    </li>
-
-    {% endif %}
-
 </ul>
 
-<div style="text-align: center; margin-top: 30px; margin-bottom: 60px;">
-    <a href="{{ site.baseurl }}/tekstovi" class="read-more"
-        style="font-family: var(--secondary-font); text-decoration: none; color: var(--accent-color); font-weight: 600;">Prikaži
-        sve tekstove →</a>
+<div style="text-align: right; margin-top: 20px; padding-bottom: 50px;">
+    <a href="{{ site.baseurl }}/tekstovi" style="color: var(--accent-color); text-decoration: none;">Prikaži sve tekstove →</a>
 </div>
