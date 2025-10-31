@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hronologija sjene: Esej o bosanskohercegovačkoj kinematografiji
+title: Hronologija sjene Esej o bosanskohercegovačkoj kinematografiji
 date: 2025-11-05 10:00:00 +0100
 category: Eseji / Studije
 permalink: /eseji/hronologija-sjene-bh-kinematografija
