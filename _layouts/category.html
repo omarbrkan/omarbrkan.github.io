@@ -19,8 +19,6 @@ layout: default
 
 <div class="page-wrapper">
 
-    <div style="height: 1px; background-color: var(--light-border-color);"></div>
-
     <main class="container">
         
         <h2 class="section-title">Kategorije</h2>
@@ -44,8 +42,8 @@ layout: default
 
         <ul class="text-list" style="margin-top: 50px;">
             {% for post in site.categories[page.category_name] %}
-            <li style="border-bottom: 1px solid var(--light-border-color);">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <li style="border-bottom: 1px solid var(--light-border-color);"> 
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a> 
                 <p class="text-meta">
                     Objavljeno: {{ post.date | date: "%d. %B %Y." }}
                 </p>
@@ -58,9 +56,6 @@ layout: default
         {% endif %}
         
     </main>
-
-    <div style="height: 1px; background-color: var(--light-border-color);"></div>
-
 
     <section class="about-author-footer">
         <div class="container">
