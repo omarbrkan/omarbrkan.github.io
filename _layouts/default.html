@@ -10,7 +10,9 @@
         href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Source+Sans+3:wght@400;600&display=swap"
         rel="stylesheet">
     
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.7em' font-size='63' fill='%23A52A2A' font-family='Georgia, serif' text-anchor='middle' x='50'>OB</text></svg>">    <style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.7em' font-size='63' fill='%23A52A2A' font-family='Georgia, serif' text-anchor='middle' x='50'>OB</text></svg>">
+
+    <style>
         :root {
             --primary-font: 'Lora', Georgia, serif;
             --secondary-font: 'Source Sans 3', 'Helvetica Neue', Arial, sans-serif;
@@ -20,6 +22,7 @@
             --border-light: #E0E0E0;
             --muted-text: #666;
             --accent-border-color: #A52A2A;
+            --light-border-color: #E0E0E0; 
         }
 
         body {
@@ -42,14 +45,6 @@
             border-bottom: 1px solid var(--border-light);
         }
         
-        .post-info-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 20px 20px 0;
-            background-color: var(--background-light); 
-        }
-        
-        /* NOVI STIL ZA GLAVNI SADRŽAJ SA VERTIKALNIM LINIJAMA */
         .page-wrapper {
             border-left: 1px solid var(--accent-border-color);
             border-right: 1px solid var(--accent-border-color);
@@ -115,6 +110,23 @@
             height: 2px;
             background-color: var(--accent-color);
             margin: 10px auto 0;
+        }
+        
+        .post-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 10px;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+        
+        .post-meta-details {
+            font-family: var(--secondary-font);
+            font-size: 0.9em;
+            color: var(--muted-text);
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .text-list {
@@ -192,7 +204,6 @@
             background-color: #f7f7f7;
             text-align: center;
             border-radius: 5px;
-            /* UKLONJENA JE STARA BORDURA: border-left: 5px solid var(--accent-color); */
         }
 
         .about-author-footer h3 {
@@ -230,43 +241,18 @@
             color: var(--accent-color);
         }
 
-        .post-page-layout {
-            padding: 40px 0;
-        }
-
-        .post-header-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            text-align: center;
-            padding: 0 20px 30px; 
-        }
-
         .post-content-container {
-            max-width: 1000px;
+            max-width: 700px; 
             margin: 0 auto;
-            padding: 20px;
+            padding: 20px 0;
         }
 
         .post-content-container p {
             font-size: 1.1em;
             line-height: 1.8;
             margin-bottom: 25px;
-        }
-
-        .post-columns {
-            columns: 2;
-            column-gap: 50px;
             text-align: justify;
         }
-
-        .post-date-top {
-            font-family: var(--secondary-font);
-            font-size: 0.9em;
-            color: var(--muted-text);
-            margin-bottom: 15px;
-            display: block;
-        }
-
 
         @media (max-width: 768px) {
             .header h1 {
@@ -279,14 +265,13 @@
             .category-grid {
                 gap: 10px;
             }
-            .post-columns {
-                columns: 1;
-                column-gap: 0;
-            }
-            /* Uklanjamo linije na malim ekranima */
             .page-wrapper {
                 border-left: none;
                 border-right: none;
+            }
+            .post-content-container {
+                max-width: 100%;
+                padding: 0 20px;
             }
         }
     </style>
