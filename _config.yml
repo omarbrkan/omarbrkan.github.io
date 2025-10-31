@@ -1,4 +1,4 @@
-fatitle: Omar Brkan
+title: Omar Brkan
 description: Eseji, proza, kritika i poezija
 author: Omar Brkan
 email: brkano@email.com
@@ -10,13 +10,16 @@ kramdown:
   hard_wrap: false
 
 baseurl: ""
+# Globalni permalink za POSTOVE (ostavite kako je bilo, ali ga čistimo)
 permalink: /:categories/:title/
 future: false
 show_excerpts: true
 
+# --- ISPRAVKA JE OVDE ---
 jekyll-category-pages:
-  layout: default 
-permalink: /:slug/
+  layout: default
+  # Koristimo siguran slug i prefiks 'kategorija-' za stranice kategorija
+  permalink: /kategorija-:slug/
 
 defaults:
   -
