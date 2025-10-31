@@ -16,7 +16,7 @@ show_excerpts: true
 
 jekyll-category-pages:
   layout: default 
-permalink: /kategorija-:slug/
+permalink: /:title/
 
 
 defaults:
