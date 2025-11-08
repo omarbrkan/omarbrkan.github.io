@@ -1,0 +1,35 @@
+<script>
+    const faviconElement = document.getElementById('dynamic-favicon');
+    const letters = ["O", "M", "A", "R"];
+    const accentColor = "#790E0F";
+    let currentIndex = 0;
+    const intervalTime = 800; 
+
+    function createFavicon(letter) {
+        const size = 32;
+        const canvas = document.createElement('canvas');
+        canvas.width = size;
+        canvas.height = size;
+        const ctx = canvas.getContext('2d');
+
+        ctx.fillStyle = accentColor;
+        ctx.font = `bold ${size * 0.7}px 'Playfair Display', serif`; 
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(letter, size / 2, size / 2 + 2); 
+
+        return canvas.toDataURL('image/png');
+    }
+
+    function updateFavicon() {
+        const letter = letters[currentIndex];
+        const dataUrl = createFavicon(letter);
+        
+        faviconElement.href = dataUrl;
+
+        currentIndex = (currentIndex + 1) % letters.length;
+    }
+
+    setInterval(updateFavicon, intervalTime);
+    updateFavicon(); 
+</script>

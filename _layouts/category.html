@@ -1,0 +1,36 @@
+---
+layout: base
+---
+
+<div class="category-page-content">
+    <h2 class="section-title">{{ page.category | capitalize }}</h2>
+
+    <ul class="text-list">
+        {% for post in site.categories[page.category] %}
+        <li class="text-list-item">
+            {% if post.categories.size > 0 %}
+            <span class="text-card-category">{{ post.categories | join: ' / ' | upcase }}</span>
+            {% endif %}
+            
+            <a href="{{ post.url | relative_url }}" class="text-list-title">{{ post.title }}</a>
+            
+            <p class="text-list-meta">Objavljeno: {{ post.date | date: "%d.%m.%Y." }}</p>
+            
+            <p class="text-list-excerpt">
+                {{ post.excerpt | strip_html | truncate: 200 }}
+            </p>
+
+            <div class="text-card-footer">
+                <span class="text-list-meta">{{ post.date | date: "%d.%m.%Y." }}</span>
+                <a href="{{ post.url | relative_url }}" class="read-more-link">Čitaj dalje</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    {% if site.categories[page.category].size == 0 %}
+        <p style="text-align: center; color: var(--text-light); margin-top: 60px;">
+            Trenutno nema objavljenih tekstova u ovoj kategoriji. 
+        </p>
+    {% endif %}
+</div>

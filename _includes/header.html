@@ -1,0 +1,14 @@
+<div class="full-width-line">
+    <header class="header">
+        <div class="container">
+            <h1>OMAR BRKAN</h1>
+            <p>Eseji, proza, kritika i poezija</p>
+
+            <nav class="header-nav">
+                <a href="{{ '/' | relative_url }}" {% if page.url == "/" or page.url == "/index.html" %}class="active"{% endif %}>Početna</a>
+                <a href="{{ '/tekstovi' | relative_url }}" {% if page.url contains "tekstovi" %}class="active"{% endif %}>Svi tekstovi</a>
+                <a href="{{ '/kontakt' | relative_url }}" {% if page.url contains "kontakt" %}class="active"{% endif %}>Kontakt</a>
+            </nav>
+        </div>
+    </header>
+</div>

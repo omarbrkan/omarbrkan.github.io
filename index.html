@@ -1,0 +1,69 @@
+---
+layout: base
+title: Omar Brkan - Eseji, Proza, Kritika i Poezija
+---
+
+<div class="main-page-content">
+
+    {% assign featured_posts = site.posts | where: "featured", true | sort: "date" | reverse | limit: 3 %}
+    
+    {% if featured_posts.size > 0 %}
+    <h2 class="section-title">Izdvojeno</h2>
+    <ul class="text-list">
+        {% for post in featured_posts %}
+        <li class="text-list-item" style="background-color: #FFF9F0;">
+            {% if post.categories.size > 0 %}
+            <span class="text-card-category">{{ post.categories | join: ' / ' | upcase }}</span>
+            {% endif %}
+            
+            <a href="{{ post.url | relative_url }}" class="text-list-title">{{ post.title }}</a>
+            
+            <p class="text-list-meta">Objavljeno: {{ post.date | date: "%d. %B %Y." }}</p>
+            
+            <p class="text-list-excerpt">
+                {{ post.excerpt | strip_html | truncate: 250 }}
+            </p>
+
+            <div class="text-card-footer">
+                <span class="text-list-meta">{{ post.date | date: "%d. %m. %Y." }}</span>
+                <a href="{{ post.url | relative_url }}" class="read-more-link">Čitaj dalje</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+    <div style="margin-bottom: 50px;"></div>
+    {% endif %}
+
+    <h2 class="section-title">Najnovije</h2>
+
+    <ul class="text-list">
+        {% assign latest_posts = site.posts | where_exp:"post", "post.featured != true" | sort: "date" | reverse | limit: 5 %}
+        {% for post in latest_posts %}
+        <li class="text-list-item">
+            {% if post.categories.size > 0 %}
+            <span class="text-card-category">{{ post.categories | join: ' / ' | upcase }}</span>
+            {% endif %}
+            
+            <a href="{{ post.url | relative_url }}" class="text-list-title">{{ post.title }}</a>
+            
+            <p class="text-list-meta">Objavljeno: {{ post.date | date: "%d. %B %Y." }}</p>
+            
+            <p class="text-list-excerpt">
+                {{ post.excerpt | strip_html | truncate: 150 }}
+            </p>
+
+            <div class="text-card-footer">
+                <span class="text-list-meta">{{ post.date | date: "%d. %m. %Y." }}</span>
+                <a href="{{ post.url | relative_url }}" class="read-more-link">Čitaj dalje</a>
+            </div>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="all-texts-link-container">
+        <a href="{{ '/tekstovi' | relative_url }}" class="read-more-link" style="font-size: 1.1em;">
+            Prikaži sve tekstove
+        </a>
+    </div>
+
+</div>

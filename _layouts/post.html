@@ -1,0 +1,19 @@
+---
+layout: base
+---
+
+<div class="post-page-layout">
+    <div class="post-title-header">
+        {% if page.categories.size > 0 %}
+        <span class="post-category-badge">{{ page.categories | join: ' / ' | upcase }}</span>
+        {% endif %}
+        <h1 class="page-title">{{ page.title }}</h1>
+        <p class="post-meta">
+            Objavljeno {{ page.date | date: "%d.%m.%Y." }}
+        </p>
+    </div>
+
+    <article class="post-content">
+        {{ content }}
+    </article>
+</div>

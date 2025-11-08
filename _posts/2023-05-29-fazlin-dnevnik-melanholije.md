@@ -1,0 +1,27 @@
+---
+layout: post
+title: Fazlin dnevnik melanholije
+author: Omar Brkan
+date: 2023-05-29 08:00:00 +0200
+category: Eseji / Studije
+---
+
+Rječnik turcizama nisam otvarao dugo baš dugo sve do prije neki dan nakon slušanja Fazlinih pjesama. “Ne znaš ti mene i meni sličnu jaliju kako god me baciš ja padnem na jaziju” – jazija je između ostalog strana novčića sa oznakom vrijednosti a jalijaš iz refrena kaže kontekst pjesme snalažljivi mladić koji se u haman svakoj neprilici spretno dočeka na noge. Tako je autor zgodno i pomalo duhovito tomssojerovski sažeo logiku tipičnog kvartovskog junaka. Jedna pa druga i tako redom stisnuo sam inače vazda ugašenu autoplej tipku na jutjubu i dobar sahatak slušao Fazlin mahalski intermeco. Nije prvi koji je pjevao o opštim i specifičnim motivima čaršijske svakodnevnice (radilo je to vjerovatno glasnije i jasnije od svih Zabranjeno pušenje) ali se barem nakon rata gušći i mekši kantautorski ćilim u Bosni nije istkao.
+
+Fazlin izraz intiman je i sveden poput razgovora dvojice starih prijatelja a mekoća i toplina su svuda – u tekstu melodiji glasu – primijetit će pažljivi slušalac grijući stopala nad gustim ćilimom. Čvrsto tradicijsko sidro mnoge je bosanske (pogotovo sarajevske) muzičare vezalo za prepoznatljivi sevdalijski sentiment i oni su taj melanholički diskurs koristili obilato često tendenciozno ali rijetko sa pažnjom i mjerom.
+
+Rječnik turcizama držao sam u blizini jer bi bez njega “Baščaršijsku” do kraja mogao razumjeti samo vršnjak Zaima Muzaferije ili student orijentalistike. Pjesma je ispletena od starih zanatskih mustri od finog prediva čuvanog u staroj škrinji – sav izgubljeni folklor starog grada stao je u jedan pitoreskni pjesmoviti opis:
+Kazandžije kucaju kao da ne mogu da nađu pravi ton kurikaju sajdžije sahat na kuli zildžije štimaju zvon … Zveckaju džezve dževdžiri i sahani mirišu na jasmin tvoji jorgani kaldrmu je uglancala kiša šuška i miriše kafa iz šiša … Danas kalajdžije sunce kalajišu samo za tebe da ti toplije bude dok zamisljaš kako moj dah te miluje
+
+“Baščaršijska” je odmah se čuje i melodijom i pjevanjem čitava umočena u topli sevdalijski saft a onda pažljivo okapana i servirana poput taman slatke baklave. Ovakvi motivi provlače se u mnogih Fazlinim pjesmama melanholija je simboličko središte njegove autorske poetike a ona je sasvim diskretno (slično vladanju glavnog lika) izražena i u pjesmi neobičnog onomatopejskog naslova “Psst ššš”. To je bajkoviti susret usnule ljepotice i nježnog vragolana koji jedne večeri nakon godina lutanja svraća u njeno dvorište. U pjesmi je vrijeme stalo kako to dopušta logika bajke a čitav svijet stao je u sliku mirisne bašte i mladića koji zaljubljeno posmatra uspavanu dragu:
+Zaobiš’o sam basamake rasklimane iste stare sigurno još uvijek škripe preskočio sam žute lale kadificu zambak jasmin pored stare lipe
+Prikrada se Fazlin romantik koji kao da je netom šmugnuo iz Balaševićevog Ćivutskog vrta u namjeri da pažljivo probudi (i iznenadi) djevojku ali zapanjen prekrasnim prizorom bira da poljubi samo njen jastuk jer “buditi je baš grehota”.
+
+Takvih je pjesama kod Fazle mnogo često i uspješnih a tu se pogotovo izdvaja ona “Ni u tvome srcu” koja je u (ponešto izmijenjenoj) duetskoj verziji Kemala Montena i Radeta Šerbedžije postala pravi zabavni klasik. A kad smo kod hitova pogodio je kantautor lijepo i sa svoja dva oriđinala “Pleši sa mnom” i “Ode Mujo u mornare” – pjesmama vedrog štiha i raspoloženja u kojima se Fazlina sveprisutna melanholija izmiče u drugi plan i dobija notu simpatičnosti. Jalijaš iz “Jazije” između kupanja na Bentbaši džeparenja novčanika i drugih kako-po-koga simpatičnih snalažljivosti jednim se korakom nađe u novoj ulozi: uz sve to stigne se zaljubiti “triput dnevno” usput podrazumijeva se cuga i puši dok naslonjen na šank u kožnoj jakni pozajmljenoj na neodređeno oponašajući recimo mladog Mladena Vojičića Tifu dobacuje: “takav sam i gotovo pleši sa mnom još se niko nije otrov’o”.
+
+Tako su u jednom sarajevskom sokaku prolazili dani novi nalik prethodnom i obratno sve dok jednom baš kad se nakon posuđivanja jakne vraćao kući jalijaš od komšinice nije čuo da mu jaran “ode u mornare”. Mujo mahalski oriđinal nije u svom odrastanju propustio nijedan momački adet vazda dobar sa rajom malo do česme malo gdje se ne sm’je – mali Sindbad nije odolio zovu morske egzotike pa se tako na ligurama s djecom spustio niz Dalmatinsku i krenuo na jug.
+Na putu ka jugu sa pjesmaricom pod miškom lirski hroničar zastao je i ispjevao važne stihove o stradanju jednog grada stihove o njegovom ranjenom simboličkom jezgru:
+“Davno sam ti rođen braca iz ovog grada nisam mak’o a vidio sam svijeta puno doš’o mi je ne bi li me tak’o…”
+Pjesma o Starom mostu – uglazbljena personifikacija u kojoj spomenik silom usuda nakratko postaje mitski kameni skakač dok autorska melanholija shodno karakteru junaka odijeva ruho poetskog optimizma i plemenitog prkosa – trajno se u uselila u kolektivno pamćenje ovih prostora.
+Negdje među najšuškavijim stranicama Fazlinog dnevnika stoji i crtica o najstarijem iz raje svojevrsni omaž pjevaču posebnog ugleda i značaja za sarajevsku kulturnu scenu – prerano preminulom Davorinu Popoviću. Priča odmjerenog i preciznog izraza koji je istovremeno i tankoćutan i snažan i opći i intiman simbolički rezime o putu jedne drugačije zvijezde koja “sija i buni se ruži i smije se i pjeva u isto vrijeme”.
+Zaklopio sam i rječnik i Fazlin dnevnik za sada. Psst ššš.
