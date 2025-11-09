@@ -5,9 +5,20 @@ title: Svi tekstovi
 
 <h2 class="section-title">Svi tekstovi</h2>
 
-<ul class="text-list">
+<!-- Category Filter -->
+<div class="category-filter">
+    <button class="filter-btn active" data-category="all">Sve</button>
+    {% assign all_categories = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort %}
+    {% for category in all_categories %}
+        {% if category != "" %}
+        <button class="filter-btn" data-category="{{ category | downcase | strip }}">{{ category | upcase }}</button>
+        {% endif %}
+    {% endfor %}
+</div>
+
+<ul class="text-list" id="posts-list">
     {% for post in site.posts %}
-    <li class="text-list-item">
+    <li class="text-list-item" data-categories="{{ post.categories | join: ',' | downcase }}">
         {% if post.categories.size > 0 %}
         <span class="text-card-category">{{ post.categories | join: ' / ' | upcase }}</span>
         {% endif %}
@@ -27,3 +38,30 @@ title: Svi tekstovi
     </li>
     {% endfor %}
 </ul>
+
+<script>
+    // Category filter functionality
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const postItems = document.querySelectorAll('.text-list-item');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            // Add active class to clicked button
+            button.classList.add('active');
+            
+            const selectedCategory = button.getAttribute('data-category');
+            
+            postItems.forEach(item => {
+                const itemCategories = item.getAttribute('data-categories');
+                
+                if (selectedCategory === 'all' || itemCategories.includes(selectedCategory)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+</script>
