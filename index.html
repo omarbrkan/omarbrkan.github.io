@@ -38,35 +38,36 @@ title: Omar Brkan - Eseji, Proza, Kritika i Poezija
     <div style="margin-bottom: 60px;"></div>
     {% endif %}
 
-    <!-- Najnoviji tekstovi - 3 -->
+    
     <h2 class="section-title">Najnovije</h2>
 
-    <div class="latest-posts">
+    <div class="latest-posts-vertical">
         {% assign latest_posts = site.posts | where_exp:"post", "post.featured != true" | sort: "date" | reverse | limit: 3 %}
         {% for post in latest_posts %}
-        <article class="latest-post-card">
-            {% if post.categories.size > 0 %}
-            <span class="text-card-category">{{ post.categories | join: ' / ' | upcase }}</span>
-            {% endif %}
+        <article class="latest-post-vertical">
+            <div class="latest-post-left">
+                {% if post.categories.size > 0 %}
+                <span class="text-card-category">{{ post.categories | join: ' / ' | upcase }}</span>
+                {% endif %}
+                
+                <h3 class="latest-post-title-vertical">
+                    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                </h3>
+                
+                <p class="latest-post-meta">{{ post.date | date: "%d.%m.%Y." }}</p>
+            </div>
             
-            <h3 class="latest-post-title">
-                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-            </h3>
-            
-            <p class="latest-post-meta">{{ post.date | date: "%d.%m.%Y." }}</p>
-            
-            <p class="latest-post-excerpt">
-                {{ post.excerpt | strip_html | truncate: 200 }}
-            </p>
-
-            <div class="latest-post-footer">
+            <div class="latest-post-right">
+                <p class="latest-post-excerpt">
+                    {{ post.excerpt | strip_html | truncate: 200 }}
+                </p>
                 <a href="{{ post.url | relative_url }}" class="read-more-link">Čitaj dalje</a>
             </div>
         </article>
         {% endfor %}
     </div>
 
-    <!-- Link ka svim tekstovima -->
+    
     <div class="all-texts-link-container">
         <a href="{{ '/tekstovi' | relative_url }}" class="view-all-btn">
             Prikaži sve tekstove
