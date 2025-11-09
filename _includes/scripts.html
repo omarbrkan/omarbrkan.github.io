@@ -1,0 +1,118 @@
+<script>
+// ========== SEARCH FUNCTIONALITY ==========
+const tagline = document.getElementById('tagline');
+const searchContainer = document.getElementById('searchContainer');
+const searchInput = document.getElementById('searchInput');
+const searchResults = document.getElementById('searchResults');
+
+// All posts data 
+const allPosts = [
+    {% for post in site.posts %}
+    {
+        title: {{ post.title | jsonify }},
+        url: "{{ post.url | relative_url }}",
+        excerpt: {{ post.excerpt | strip_html | jsonify }},
+        date: "{{ post.date | date: '%d.%m.%Y.' }}",
+        categories: {{ post.categories | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+];
+
+if (tagline && searchContainer && searchInput) {
+    tagline.addEventListener('click', () => {
+        if (searchContainer.style.display === 'none') {
+            searchContainer.style.display = 'block';
+            searchInput.focus();
+        } else {
+            searchContainer.style.display = 'none';
+            searchResults.innerHTML = '';
+        }
+    });
+
+    searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        
+        if (query.length < 2) {
+            searchResults.innerHTML = '';
+            return;
+        }
+        
+        const filtered = allPosts.filter(post => 
+            post.title.toLowerCase().includes(query) || 
+            post.excerpt.toLowerCase().includes(query)
+        );
+        
+        if (filtered.length === 0) {
+            searchResults.innerHTML = '<div class="search-no-results">Nema rezultata</div>';
+        } else {
+            searchResults.innerHTML = filtered.slice(0, 5).map(post => `
+                <a href="${post.url}" class="search-result-item" style="display: block; text-decoration: none;">
+                    <div class="search-result-title">${post.title}</div>
+                    <div class="search-result-excerpt">${post.excerpt.substring(0, 100)}...</div>
+                </a>
+            `).join('');
+        }
+    });
+
+    // Close search when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!searchContainer.contains(e.target) && e.target !== tagline) {
+            searchContainer.style.display = 'none';
+            searchResults.innerHTML = '';
+        }
+    });
+}
+
+
+const progressBar = document.getElementById('readingProgress');
+
+if (progressBar) {
+    window.addEventListener('scroll', () => {
+        const windowHeight = window.innerHeight;
+        const documentHeight = document.documentElement.scrollHeight;
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        
+        const scrollPercent = (scrollTop / (documentHeight - windowHeight)) * 100;
+        progressBar.style.width = scrollPercent + '%';
+    });
+}
+
+
+const backToTopBtn = document.getElementById('backToTop');
+
+if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.pageYOffset > 300) {
+            backToTopBtn.classList.add('visible');
+        } else {
+            backToTopBtn.classList.remove('visible');
+        }
+    });
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+}
+
+
+const copyLinkBtn = document.getElementById('copyLinkBtn');
+
+if (copyLinkBtn) {
+    copyLinkBtn.addEventListener('click', () => {
+        const url = window.location.href;
+        
+        navigator.clipboard.writeText(url).then(() => {
+            copyLinkBtn.classList.add('copied');
+            
+            setTimeout(() => {
+                copyLinkBtn.classList.remove('copied');
+            }, 2000);
+        }).catch(err => {
+            console.error('Failed to copy:', err);
+        });
+    });
+}
+</script>
