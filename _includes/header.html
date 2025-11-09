@@ -2,7 +2,21 @@
     <header class="header">
         <div class="container">
             <h1>OMAR BRKAN</h1>
-            <p>Eseji, proza, kritika i poezija</p>
+            <p class="tagline-clickable" id="tagline">
+                Eseji, proza, kritika i poezija
+                <span class="search-icon">🔍</span>
+            </p>
+
+           
+            <div class="search-container" id="searchContainer" style="display: none;">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Pretraži tekstove..." 
+                    class="search-input"
+                />
+                <div id="searchResults" class="search-results"></div>
+            </div>
 
             <nav class="header-nav">
                 <a href="{{ '/' | relative_url }}" {% if page.url == "/" or page.url == "/index.html" %}class="active"{% endif %}>Početna</a>
