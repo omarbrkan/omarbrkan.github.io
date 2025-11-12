@@ -1003,4 +1003,97 @@ html {
         margin-top: 20px;
     }
 }
+
+.success-message {
+    display: none;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.error-message {
+    display: none;
+    background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+.contact-container label {
+    display: block;
+    font-family: var(--secondary-font);
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-size: 0.95em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.contact-container input[type="text"],
+.contact-container input[type="email"],
+.contact-container textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid var(--border-color);
+    background: var(--background-cream);
+    font-size: 1em;
+    transition: all 0.3s ease;
+    font-family: var(--secondary-font);
+    color: var(--text-dark);
+}
+
+.contact-container input[type="text"]:focus,
+.contact-container input[type="email"]:focus,
+.contact-container textarea:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background: white;
+    box-shadow: 0 4px 12px rgba(121, 14, 15, 0.1);
+}
+
+.contact-container textarea {
+    resize: vertical;
+    min-height: 150px;
+    line-height: 1.6;
+}
+
+.contact-container button[type="submit"] {
+    width: 100%;
+    padding: 18px;
+    background: linear-gradient(135deg, var(--accent-color) 0%, var(--accent-light) 100%);
+    color: white;
+    border: none;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--secondary-font);
+    box-shadow: 0 4px 12px rgba(121, 14, 15, 0.2);
+}
+
+.contact-container button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(121, 14, 15, 0.3);
+}
+
+.contact-container button[type="submit"]:active {
+    transform: translateY(0);
+}
+    
 </style>
